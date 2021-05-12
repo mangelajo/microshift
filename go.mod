@@ -3,6 +3,7 @@ module github.com/openshift/microshift
 go 1.16
 
 replace (
+	github.com/coreos/go-iptables => github.com/coreos/go-iptables v0.2.0
 	github.com/docker/distribution => github.com/openshift/docker-distribution v0.0.0-20180925154709-d4c35485a70d
 	github.com/docker/docker => github.com/docker/docker v17.12.0-ce-rc1.0.20200916142827-bd33bbf0497b+incompatible
 	github.com/google/cadvisor => github.com/google/cadvisor v0.38.5
@@ -163,6 +164,7 @@ require (
 	github.com/openshift/openshift-apiserver v0.0.0-alpha.0.0.20210324042139-a0f41548179e
 	github.com/openshift/openshift-controller-manager v0.0.0-alpha.0.0.20210204125221-e0755cd0dca5
 	github.com/openshift/runtime-utils v0.0.0-20200415173359-c45d4ff3f912 // indirect
+	github.com/openshift/sdn v0.0.0-alpha.0.0.20210410115932-2310aee1ebfc // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/profile v1.3.0 // indirect
