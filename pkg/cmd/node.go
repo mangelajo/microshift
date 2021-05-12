@@ -35,5 +35,8 @@ func startNode(args []string) error {
 	if err := node.StartKubelet(); err != nil {
 		return err
 	}
+	if err := node.StartOpenShiftSDN(); err != nil {
+		return err
+	}
 	select {}
 }

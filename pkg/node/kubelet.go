@@ -78,17 +78,3 @@ func StartKubelet() error {
 
 	return nil
 }
-
-/*
-/usr/bin/openshift-sdn-node
---node-name crc-xl2km-master-0
---node-ip 192.168.126.11
---proxy-config /config/kube-proxy-config.yaml
---v 2
-*/
-func StartKubeProxy(args []string) {
-	command := kubeproxy.NewProxyCommand()
-	go func() {
-		logrus.Fatalf("kube-proxy exited: %v", command.Execute())
-	}()
-}
