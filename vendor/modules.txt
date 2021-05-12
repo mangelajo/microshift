@@ -197,7 +197,7 @@ github.com/containerd/continuity/sysx
 # github.com/containerd/ttrpc v1.0.2
 ## explicit
 github.com/containerd/ttrpc
-# github.com/containernetworking/cni v0.8.0
+# github.com/containernetworking/cni v0.8.0 => github.com/containernetworking/cni v0.8.0
 ## explicit
 github.com/containernetworking/cni/libcni
 github.com/containernetworking/cni/pkg/invoke
@@ -206,6 +206,9 @@ github.com/containernetworking/cni/pkg/types/020
 github.com/containernetworking/cni/pkg/types/current
 github.com/containernetworking/cni/pkg/utils
 github.com/containernetworking/cni/pkg/version
+# github.com/containernetworking/plugins v0.6.0 => github.com/containernetworking/plugins v0.6.0
+## explicit
+github.com/containernetworking/plugins/pkg/ns
 # github.com/containers/image v3.0.2+incompatible
 ## explicit
 github.com/containers/image/docker
@@ -584,8 +587,7 @@ github.com/mailru/easyjson/jwriter
 # github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369
 ## explicit
 github.com/matttproud/golang_protobuf_extensions/pbutil
-# github.com/miekg/dns v1.1.4
-## explicit
+# github.com/miekg/dns v1.1.35
 github.com/miekg/dns
 # github.com/mindprince/gonvml v0.0.0-20190828220739-9ebdce4bb989
 ## explicit
@@ -891,6 +893,7 @@ github.com/openshift/library-go/pkg/image/registryclient
 github.com/openshift/library-go/pkg/image/trigger
 github.com/openshift/library-go/pkg/legacyapi/legacygroupification
 github.com/openshift/library-go/pkg/network
+github.com/openshift/library-go/pkg/network/networkutils
 github.com/openshift/library-go/pkg/oauth/oauthdiscovery
 github.com/openshift/library-go/pkg/quota/clusterquotamapping
 github.com/openshift/library-go/pkg/quota/quotautil
@@ -1100,6 +1103,20 @@ github.com/openshift/openshift-controller-manager/pkg/version
 # github.com/openshift/runtime-utils v0.0.0-20200415173359-c45d4ff3f912
 ## explicit
 github.com/openshift/runtime-utils/pkg/registries
+# github.com/openshift/sdn v0.0.0-alpha.0.0.20210510225440-08deed14205f
+## explicit
+github.com/openshift/sdn/pkg/network
+github.com/openshift/sdn/pkg/network/common
+github.com/openshift/sdn/pkg/network/node
+github.com/openshift/sdn/pkg/network/node/cniserver
+github.com/openshift/sdn/pkg/network/node/metrics
+github.com/openshift/sdn/pkg/network/node/ovs
+github.com/openshift/sdn/pkg/network/node/ovs/ovsclient
+github.com/openshift/sdn/pkg/network/proxy
+github.com/openshift/sdn/pkg/network/proxyimpl/hybrid
+github.com/openshift/sdn/pkg/network/proxyimpl/unidler
+github.com/openshift/sdn/pkg/openshift-sdn
+github.com/openshift/sdn/pkg/version
 # github.com/peterbourgon/diskv v2.0.1+incompatible
 ## explicit
 github.com/peterbourgon/diskv
@@ -1599,7 +1616,7 @@ gopkg.in/warnings.v0
 # gopkg.in/yaml.v2 v2.3.0
 ## explicit
 gopkg.in/yaml.v2
-# k8s.io/api v0.21.0-rc.0 => k8s.io/api v0.20.0
+# k8s.io/api v1.21.0-rc.0 => k8s.io/api v0.20.0
 ## explicit
 k8s.io/api/admission/v1
 k8s.io/api/admission/v1beta1
@@ -1688,7 +1705,7 @@ k8s.io/apiextensions-apiserver/pkg/generated/openapi
 k8s.io/apiextensions-apiserver/pkg/registry/customresource
 k8s.io/apiextensions-apiserver/pkg/registry/customresource/tableconvertor
 k8s.io/apiextensions-apiserver/pkg/registry/customresourcedefinition
-# k8s.io/apimachinery v0.21.0-rc.0 => k8s.io/apimachinery v0.20.0
+# k8s.io/apimachinery v1.21.0-rc.0 => k8s.io/apimachinery v0.20.0
 ## explicit
 k8s.io/apimachinery/pkg/api/equality
 k8s.io/apimachinery/pkg/api/errors
@@ -1751,8 +1768,7 @@ k8s.io/apimachinery/pkg/watch
 k8s.io/apimachinery/third_party/forked/golang/json
 k8s.io/apimachinery/third_party/forked/golang/netutil
 k8s.io/apimachinery/third_party/forked/golang/reflect
-# k8s.io/apiserver v0.21.0-rc.0 => github.com/openshift/kubernetes/staging/src/k8s.io/apiserver v0.0.0-20210430024024-e3fdce453fbd
-## explicit
+# k8s.io/apiserver v1.21.0-rc.0 => github.com/openshift/kubernetes/staging/src/k8s.io/apiserver v0.0.0-20210430024024-e3fdce453fbd
 k8s.io/apiserver/pkg/admission
 k8s.io/apiserver/pkg/admission/configuration
 k8s.io/apiserver/pkg/admission/initializer
@@ -1904,7 +1920,7 @@ k8s.io/cli-runtime/pkg/kustomize/k8sdeps/transformer/patch
 k8s.io/cli-runtime/pkg/kustomize/k8sdeps/validator
 k8s.io/cli-runtime/pkg/printers
 k8s.io/cli-runtime/pkg/resource
-# k8s.io/client-go v0.21.0-rc.0 => k8s.io/client-go v0.20.0
+# k8s.io/client-go v1.21.0-rc.0 => k8s.io/client-go v0.20.0
 ## explicit
 k8s.io/client-go/discovery
 k8s.io/client-go/discovery/cached
@@ -2183,7 +2199,7 @@ k8s.io/cluster-bootstrap/util/secrets
 k8s.io/cluster-bootstrap/util/tokens
 # k8s.io/code-generator v0.21.0-rc.0 => k8s.io/code-generator v0.20.0
 ## explicit
-# k8s.io/component-base v0.21.0-rc.0 => k8s.io/component-base v0.20.0
+# k8s.io/component-base v1.21.0-rc.0 => k8s.io/component-base v0.20.0
 ## explicit
 k8s.io/component-base/cli/flag
 k8s.io/component-base/cli/globalflag
@@ -2227,8 +2243,7 @@ k8s.io/controller-manager/pkg/clientbuilder
 k8s.io/controller-manager/pkg/features
 k8s.io/controller-manager/pkg/features/register
 k8s.io/controller-manager/pkg/informerfactory
-# k8s.io/cri-api v0.0.0 => k8s.io/cri-api v0.20.0
-## explicit
+# k8s.io/cri-api v1.21.0-rc.0 => k8s.io/cri-api v0.20.0
 k8s.io/cri-api/pkg/apis
 k8s.io/cri-api/pkg/apis/runtime/v1alpha2
 # k8s.io/csi-translation-lib v0.20.4 => k8s.io/csi-translation-lib v0.20.0
@@ -2242,6 +2257,7 @@ k8s.io/heapster/metrics/api/v1/types
 ## explicit
 k8s.io/klog/v2
 # k8s.io/kube-aggregator v0.21.0-rc.0 => github.com/openshift/kubernetes/staging/src/k8s.io/kube-aggregator v0.0.0-20210430024024-e3fdce453fbd
+## explicit
 k8s.io/kube-aggregator/pkg/apis/apiregistration
 k8s.io/kube-aggregator/pkg/apis/apiregistration/install
 k8s.io/kube-aggregator/pkg/apis/apiregistration/v1
@@ -2295,8 +2311,7 @@ k8s.io/kube-proxy/config/v1alpha1
 k8s.io/kube-scheduler/config/v1
 k8s.io/kube-scheduler/config/v1beta1
 k8s.io/kube-scheduler/extender/v1
-# k8s.io/kubectl v0.20.4 => k8s.io/kubectl v0.20.0
-## explicit
+# k8s.io/kubectl v1.21.0-rc.0 => k8s.io/kubectl v0.20.0
 k8s.io/kubectl/pkg/cmd/util
 k8s.io/kubectl/pkg/scheme
 k8s.io/kubectl/pkg/util/interrupt
@@ -2990,6 +3005,7 @@ k8s.io/kubernetes/pkg/util/flock
 k8s.io/kubernetes/pkg/util/goroutinemap
 k8s.io/kubernetes/pkg/util/goroutinemap/exponentialbackoff
 k8s.io/kubernetes/pkg/util/hash
+k8s.io/kubernetes/pkg/util/interrupt
 k8s.io/kubernetes/pkg/util/ipconfig
 k8s.io/kubernetes/pkg/util/ipset
 k8s.io/kubernetes/pkg/util/iptables
@@ -3220,6 +3236,9 @@ sigs.k8s.io/structured-merge-diff/v4/value
 # sigs.k8s.io/yaml v1.2.0
 ## explicit
 sigs.k8s.io/yaml
+# github.com/containernetworking/cni => github.com/containernetworking/cni v0.8.0
+# github.com/containernetworking/plugins => github.com/containernetworking/plugins v0.6.0
+# github.com/coreos/go-iptables => github.com/coreos/go-iptables v0.2.0
 # github.com/docker/distribution => github.com/openshift/docker-distribution v0.0.0-20180925154709-d4c35485a70d
 # github.com/docker/docker => github.com/docker/docker v17.12.0-ce-rc1.0.20200916142827-bd33bbf0497b+incompatible
 # github.com/google/cadvisor => github.com/google/cadvisor v0.38.5
