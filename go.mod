@@ -3,6 +3,8 @@ module github.com/openshift/microshift
 go 1.16
 
 replace (
+	github.com/containernetworking/cni => github.com/containernetworking/cni v0.8.0
+	github.com/containernetworking/plugins => github.com/containernetworking/plugins v0.6.0
 	github.com/coreos/go-iptables => github.com/coreos/go-iptables v0.2.0
 	github.com/docker/distribution => github.com/openshift/docker-distribution v0.0.0-20180925154709-d4c35485a70d
 	github.com/docker/docker => github.com/docker/docker v17.12.0-ce-rc1.0.20200916142827-bd33bbf0497b+incompatible
@@ -71,6 +73,7 @@ require (
 	github.com/containerd/containerd v1.4.1 // indirect
 	github.com/containerd/ttrpc v1.0.2 // indirect
 	github.com/containernetworking/cni v0.8.0 // indirect
+	github.com/containernetworking/plugins v0.6.0 // indirect
 	github.com/containers/image v3.0.2+incompatible // indirect
 	github.com/containers/storage v0.0.0-20170801145921-47536c89fcc5 // indirect
 	github.com/coreos/go-oidc v2.1.0+incompatible // indirect
@@ -136,7 +139,6 @@ require (
 	github.com/lithammer/dedent v1.1.0 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369 // indirect
-	github.com/miekg/dns v1.1.4 // indirect
 	github.com/mindprince/gonvml v0.0.0-20190828220739-9ebdce4bb989 // indirect
 	github.com/mistifyio/go-zfs v2.1.2-0.20190413222219-f784269be439+incompatible // indirect
 	github.com/mitchellh/go-wordwrap v1.0.0 // indirect
@@ -156,17 +158,17 @@ require (
 	github.com/opencontainers/runc v1.0.0-rc92 // indirect
 	github.com/opencontainers/runtime-spec v1.0.3-0.20200728170252-4d89ac9fbff6 // indirect
 	github.com/opencontainers/selinux v1.6.0 // indirect
-	github.com/openshift/api v0.0.0-20210412200117-f60a0b2883ea // indirect
+	github.com/openshift/api v0.0.0-20210412200117-f60a0b2883ea
 	github.com/openshift/apiserver-library-go v0.0.0-20210426120049-59b0e972bfb7 // indirect
 	github.com/openshift/build-machinery-go v0.0.0-20210423112049-9415d7ebd33e // indirect
-	github.com/openshift/client-go v0.0.0-20210331195552-cf6c2669e01f // indirect
-	github.com/openshift/library-go v0.0.0-20210331235027-66936e2fcc52
+	github.com/openshift/client-go v0.0.0-20210331195552-cf6c2669e01f
+	github.com/openshift/library-go v0.0.0-20210331235027-66936e2fcc52 // indirect
 	github.com/openshift/openshift-apiserver v0.0.0-alpha.0.0.20210324042139-a0f41548179e
 	github.com/openshift/openshift-controller-manager v0.0.0-alpha.0.0.20210204125221-e0755cd0dca5
 	github.com/openshift/runtime-utils v0.0.0-20200415173359-c45d4ff3f912 // indirect
-	github.com/openshift/sdn v0.0.0-alpha.0.0.20210410115932-2310aee1ebfc // indirect
+	github.com/openshift/sdn v0.0.0-alpha.0.0.20210510225440-08deed14205f
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
-	github.com/pkg/errors v0.9.1 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/pkg/profile v1.3.0 // indirect
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
 	github.com/prometheus/client_golang v1.7.1 // indirect
@@ -183,7 +185,7 @@ require (
 	github.com/soheilhy/cmux v0.1.4 // indirect
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/spf13/cobra v1.1.1
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/pflag v1.0.5
 	github.com/storageos/go-api v2.2.0+incompatible // indirect
 	github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2 // indirect
 	github.com/thecodeteam/goscaleio v0.1.0 // indirect
@@ -219,28 +221,26 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2 // indirect
 	gopkg.in/warnings.v0 v0.1.1 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
-	k8s.io/api v0.21.0-rc.0 // indirect
-	k8s.io/apiextensions-apiserver v0.21.0-rc.0 // indirect
-	k8s.io/apimachinery v0.21.0-rc.0
-	k8s.io/apiserver v0.21.0-rc.0 // indirect
+	k8s.io/api v1.21.0-rc.0
+	k8s.io/apiextensions-apiserver v0.21.0-rc.0
+	k8s.io/apimachinery v1.21.0-rc.0
 	k8s.io/cli-runtime v0.20.4 // indirect
-	k8s.io/client-go v0.21.0-rc.0 // indirect
+	k8s.io/client-go v1.21.0-rc.0
 	k8s.io/cloud-provider v0.20.4 // indirect
 	k8s.io/cluster-bootstrap v0.0.0 // indirect
 	k8s.io/code-generator v0.21.0-rc.0 // indirect
-	k8s.io/component-base v0.21.0-rc.0
+	k8s.io/component-base v1.21.0-rc.0
 	k8s.io/component-helpers v0.20.4 // indirect
-	k8s.io/controller-manager v0.20.4 // indirect
-	k8s.io/cri-api v0.0.0 // indirect
+	k8s.io/controller-manager v0.20.4
 	k8s.io/csi-translation-lib v0.20.4 // indirect
 	k8s.io/heapster v1.2.0-beta.1 // indirect
 	k8s.io/klog/v2 v2.8.0 // indirect
+	k8s.io/kube-aggregator v0.21.0-rc.0
 	//k8s.io/kube-aggregator v0.21.0-rc.0 // indirect
 	k8s.io/kube-controller-manager v0.0.0 // indirect
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd // indirect
 	k8s.io/kube-proxy v0.0.0 // indirect
 	k8s.io/kube-scheduler v0.0.0 // indirect
-	k8s.io/kubectl v0.20.4 // indirect
 	k8s.io/kubelet v0.0.0 // indirect
 	k8s.io/kubernetes v1.21.0-rc.0
 	k8s.io/legacy-cloud-providers v0.0.0 // indirect
