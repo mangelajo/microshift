@@ -29,6 +29,6 @@ jobs:
         env:
           COPR_BASE64_TOKEN: ${{ secrets.COPR_BASE64_TOKEN }}
 
-      - name: copr build
-        shell: bash
-        run: copr-cli build @redhat-et/microshift packaging/rpm/_rpmbuild/SRPMS/*.src.rpm # --nowait
+      #- name: copr build
+      #  shell: bash
+      #  run: copr-cli build mangelajo/microshift packaging/rpm/_rpmbuild/SRPMS/*.src.rpm # --nowait
