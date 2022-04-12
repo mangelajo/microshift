@@ -22,6 +22,10 @@ const (
 	defaultUserDataDir      = "~/.microshift/data"
 	defaultGlobalConfigFile = "/etc/microshift/config.yaml"
 	defaultGlobalDataDir    = "/var/lib/microshift"
+	// for files managed via management system in /etc, i.e. user applications
+	defaultKustomizeDirEtc = "/etc/microshift/manifests"
+	// for files embedded in ostree. i.e. cni/other component customizations
+	defaultKustomizeDirLib = "/usr/lib/microshift/manifests"
 )
 
 var (
@@ -62,6 +66,8 @@ type MicroshiftConfig struct {
 	Cluster      ClusterConfig      `yaml:"cluster"`
 	ControlPlane ControlPlaneConfig `yaml:"controlPlane"`
 	Node         NodeConfig         `yaml:"node"`
+
+	Manifests []string `yaml:manifests`
 }
 
 func NewMicroshiftConfig() *MicroshiftConfig {
@@ -92,6 +98,7 @@ func NewMicroshiftConfig() *MicroshiftConfig {
 		},
 		ControlPlane: ControlPlaneConfig{},
 		Node:         NodeConfig{},
+		Manifests:    []string{defaultKustomizeDirLib, defaultKustomizeDirEtc},
 	}
 }
 
